@@ -1,31 +1,28 @@
 #include <iostream>
+using namespace std;
 
-int main()
-{
-    std::cout<<"Hello World";
-    int num1,num2;
+int main() {
+    cout << "Hello World";
+    
+    int num1, num2;
     char oper;
-    std::cout << "\nEnter first number: ";
-    std::cin >> num1;
-    std::cout << "Enter second number: ";
-    std::cin >> num2;
-    std::cout << "Enter Operator: ";
-    std::cin >> oper;
-    if(num2==0 && oper=='/'){
-        std::cout << "Cannot divide by zero";
-    }
-    else{
-        switch(oper){
-            case '+': std::cout << num1 << " + " << num2 << " = " << (num1+num2);
-                    break;
-            case '-' : std::cout << num1 << " - " << num2 << " = " << (num1-num2);
-                    break;
-            case '*' : std::cout << num1 << " * " << num2 << " = " << (num1*num2);
-                    break;
-            case '/' : std::cout << num1 << " / " << num2 << " = " << (num1/num2);
-                    break;
-            default: std::cout << "Invalid operator";
-                    break;
+
+    cout << "\nEnter first number: ";
+    cin >> num1;
+    cout << "Enter second number: ";
+    cin >> num2;
+    cout << "Enter Operator: ";
+    cin >> oper;
+
+    if (num2 == 0 && oper == '/') {
+        cout << "Cannot divide by zero";
+    } else {
+        switch (oper) {
+            case '+': cout << num1 << " + " << num2 << " = " << num1 + num2; break;
+            case '-': cout << num1 << " - " << num2 << " = " << num1 - num2; break;
+            case '*': cout << num1 << " * " << num2 << " = " << num1 * num2; break;
+            case '/': cout << num1 << " / " << num2 << " = " << num1 / num2; break;
+            default:  cout << "Invalid operator"; 
         }
     }
     return 0;
